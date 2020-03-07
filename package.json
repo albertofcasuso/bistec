@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch-js": "babel src/ --watch --out-file ./js/main.js",
-    "watch-scss": "node-sass -w --include-path scss sass/main.scss css/main.css --output-style compressed",
-    "server": "live-server --no-browser --watch=\"js,css\"",
+    "watch-js": "babel src/js --watch --out-dir build/js",
+    "watch-scss": "node-sass -w --include-path scss src/sass/main.scss -o build/css --output-style compressed",
+    "server": "live-server --no-browser --watch=\"build\"",
     "bistec": "concurrently \"npm:watch-js\" \"npm:watch-scss\" \"npm:server\" "
   },
   "author": "",

@@ -1,4 +1,8 @@
+/* A simple example scss */
+@import 'import.scss';
+
 $badass: #bada55;
+
 body {
   margin: 150px;
   background-color: $badass;
