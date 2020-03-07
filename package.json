@@ -1,0 +1,23 @@
+{
+  "name": "Bistec",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch-js": "babel src/ --watch --out-file ./js/main.js",
+    "watch-scss": "node-sass -w --include-path scss sass/main.scss css/main.css --output-style compressed",
+    "server": "live-server --no-browser --watch=\"js,css\"",
+    "bistec": "concurrently \"npm:watch-js\" \"npm:watch-scss\" \"npm:server\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7"
+  }
+}
